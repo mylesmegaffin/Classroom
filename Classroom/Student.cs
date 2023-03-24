@@ -55,5 +55,9 @@ namespace Classroom
             }
         }
 
+        public string Intro()
+        {
+            return $"Hello my name is {Firstname} {Lastname} and I'm getting a {GetGrade()} in this class";
+        }
     }
 }
