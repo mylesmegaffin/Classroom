@@ -17,6 +17,12 @@ namespace Classroom
         
         }
 
+        public Student(string firstname, string lastname)
+        {
+            this.Firstname = firstname;
+            this.Lastname = lastname;
+        }
+
         public Student(string firstname, string lastname, int grade)
         {
             this.Firstname = firstname;
