@@ -6,14 +6,27 @@ namespace Classroom
     {
         static void Main(string[] args)
         {
-            Student student  = new Student("Myles", "Megaffin", 144);
-            Student student1 = new Student("Jake", "Water", -20);
-            Student student2 = new Student("Kevin", "Ketchup", 83);
+            // Hardcodes names
+            string[] firstnames = { "Jack", "Mike", "Sam", "Kyle", "Ryan" };
+            string[] lastnames = { "Hill", "Toppy", "Johnson", "Sloan", "Jackie" };
+
+            // Classroom size of students is 5
+            Student[] classroom = new Student[5];
+
+            // Putting Sutdents in the classroom
+            for (int i = 0; i < classroom.Length; i++)
+            {
+                classroom[i] = new Student($"{firstnames[i]}", $"{lastnames[i]}", i * 15);
+            }
+
+
 
             Console.WriteLine("Welcome to the Classroom, Introduce yourselves:");
-            Console.WriteLine(student.Intro());
-            Console.WriteLine(student1.Intro());
-            Console.WriteLine(student2.Intro());
+            foreach (Student student in classroom)
+            {
+                Console.WriteLine(student.Intro());
+            }
+
 
         }
     }
